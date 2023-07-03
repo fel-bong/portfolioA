@@ -2,40 +2,38 @@
 <html lang="en">
 
 <head>
-  <div id="particles-js">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <title>Felipe's Portfolio</title>
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-      // JavaScript for smooth scrolling
-      $(document).ready(function() {
-        // Add smooth scrolling to all links
-        $("a").on('click', function(event) {
-          if (this.hash !== "") {
-            event.preventDefault();
-            var hash = this.hash;
-            $('html, body').animate({
-              scrollTop: $(hash).offset().top
-            }, 800, function() {
-              window.location.hash = hash;
-            });
-          }
-        });
-      });
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <title>Felipe's Portfolio</title>
   
-      // JavaScript for sticky navigation
-      $(window).scroll(function() {
-        if ($(this).scrollTop() > 0) {
-          $('header').addClass('sticky');
-        } else {
-          $('header').removeClass('sticky');
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    // JavaScript for smooth scrolling
+    $(document).ready(function() {
+      // Add smooth scrolling to all links
+      $("a").on('click', function(event) {
+        if (this.hash !== "") {
+          event.preventDefault();
+          var hash = this.hash;
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function() {
+            window.location.hash = hash;
+          });
         }
       });
-    </script>
-  </div>
+    });
+
+    // JavaScript for sticky navigation
+    $(window).scroll(function() {
+      if ($(this).scrollTop() > 0) {
+        $('header').addClass('sticky');
+      } else {
+        $('header').removeClass('sticky');
+      }
+    });
+  </script>
 </head>
 
 <body>
